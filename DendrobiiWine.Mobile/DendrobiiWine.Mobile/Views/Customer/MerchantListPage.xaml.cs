@@ -17,7 +17,7 @@ namespace DendrobiiWine.Mobile.Views.Customer
 
         private async void OnChangeCityActivated(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new CityListPage());
+            await Navigation.PushModalAsync(new NavigationPage(new CityListPage()));
         }
     }
 }

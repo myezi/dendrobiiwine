@@ -14,5 +14,10 @@ namespace DendrobiiWine.Mobile.Views.Customer
         {
             InitializeComponent();
         }
+
+        private async void OnSelectCity(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync(true);
+        }
     }
 }
