@@ -10,7 +10,7 @@ namespace DendrobiiWine.Mobile
 		public App ()
 		{
             // The root page of your application
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage =  new NavigationPage(new LoginPage());
 		}
 
 		protected override void OnStart ()

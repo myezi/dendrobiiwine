@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace DendrobiiWine.Mobile.Views
+namespace DendrobiiWine.Mobile.Views.Customer
 {
-    public partial class MerchantListPage : ContentPage
+    public partial class CityListPage : ContentPage
     {
-        public MerchantListPage()
+        public CityListPage()
         {
             InitializeComponent();
         }

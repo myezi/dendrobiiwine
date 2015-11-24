@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DendrobiiWine.Mobile.Views.Customer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,15 @@ namespace DendrobiiWine.Mobile.Views
         public LoginPage()
         {
             InitializeComponent();
+        }
+
+        private async void OnLogin(object sender, EventArgs e)
+        {
+            Navigation.InsertPageBefore(new MerchantListPage(), this);
+
+            await Navigation.PopAsync(true);
+
+            Navigation.RemovePage(this);
         }
     }
 }
