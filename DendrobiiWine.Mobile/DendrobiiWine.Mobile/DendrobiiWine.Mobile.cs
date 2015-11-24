@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DendrobiiWine.Mobile.Views;
+using System;
 
 using Xamarin.Forms;
 
@@ -9,7 +10,7 @@ namespace DendrobiiWine.Mobile
 		public App ()
 		{
             // The root page of your application
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new LoginPage());
 		}
 
 		protected override void OnStart ()
