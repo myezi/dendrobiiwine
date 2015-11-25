@@ -1,14 +1,14 @@
-﻿using System;
-using Xamarin.Forms;
-using ZXing.Mobile;
-using ZXing.Common;
-using Android.Graphics;
-using System.IO;
+﻿using DendrobiiWine.Mobile.iOS;
 using DendrobiiWine.Mobile.Services;
-using DendrobiiWine.Mobile.Droid;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using ZXing.Common;
+using ZXing.Mobile;
 
 [assembly: Xamarin.Forms.Dependency(typeof(BarcodeService))]
-namespace DendrobiiWine.Mobile.Droid
+namespace DendrobiiWine.Mobile.iOS
 {
     public class BarcodeService : IBarCodeService
     {
@@ -24,10 +24,9 @@ namespace DendrobiiWine.Mobile.Droid
                 },
                 Renderer = new BitmapRenderer()
             };
-
+            
             var bitmap = barcodeWriter.Write(contents);
-            var stream = new MemoryStream();
-            bitmap.Compress(Bitmap.CompressFormat.Png, 100, stream);
+            var stream = bitmap.AsPNG().AsStream();
             stream.Position = 0;
 
             return stream;
