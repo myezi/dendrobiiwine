@@ -32,11 +32,14 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="IQRCode.cs" />
+    <Compile Include="Services\IBarCodeService.cs" />
     <Compile Include="Models\MerchantModel.cs" />
     <Compile Include="ThemedNavigationPage.cs" />
     <Compile Include="DendrobiiWine.Mobile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Customer\BarcodePage.xaml.cs">
+      <DependentUpon>BarcodePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Customer\CityListPage.xaml.cs">
       <DependentUpon>CityListPage.xaml</DependentUpon>
     </Compile>
@@ -45,9 +48,6 @@
     </Compile>
     <Compile Include="Views\Customer\MerchantListPage.xaml.cs">
       <DependentUpon>MerchantListPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Customer\QRCodePage.xaml.cs">
-      <DependentUpon>QRCodePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -100,7 +100,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\Customer\QRCodePage.xaml">
+    <EmbeddedResource Include="Views\Customer\BarcodePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

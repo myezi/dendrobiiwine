@@ -61,7 +61,7 @@ namespace DendrobiiWine.Mobile.Views.Customer
 
         private async void OnGRcodeActivated(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new QRCodePage());
+            await Navigation.PushAsync(new BarcodePage());
         }
 
         private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
