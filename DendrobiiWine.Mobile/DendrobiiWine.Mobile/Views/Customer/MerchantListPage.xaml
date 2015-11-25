@@ -7,7 +7,7 @@
     <ToolbarItem Name="无锡" Activated="OnCityActivated"/>
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <ListView x:Name="listView" ItemSelected="OnItemSelected">
+    <ListView x:Name="listView" ItemSelected="OnItemSelected" IsPullToRefreshEnabled="true">
       <ListView.ItemTemplate>
         <DataTemplate>
           <!--<ViewCell>
