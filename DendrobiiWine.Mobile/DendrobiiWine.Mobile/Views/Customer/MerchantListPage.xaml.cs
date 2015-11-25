@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DendrobiiWine.Mobile.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,9 +16,61 @@ namespace DendrobiiWine.Mobile.Views.Customer
             InitializeComponent();
         }
 
-        private async void OnChangeCityActivated(object sender, EventArgs e)
+        protected override void OnAppearing()
+        {
+
+            listView.ItemsSource = new List<MerchantModel>
+            {
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { DisplayName = "mono"},
+            };
+        }
+
+        private async void OnCityActivated(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new CityListPage()));
+        }
+
+        private async void OnItemSelected(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -18,7 +18,7 @@ namespace DendrobiiWine.Mobile.Views
 
         private async void OnLogin(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new MerchantListPage()));
+            await Navigation.PushModalAsync(new ThemedNavigationPage(new MerchantListPage()));
         }
     }
 }
