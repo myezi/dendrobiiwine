@@ -21,46 +21,36 @@ namespace DendrobiiWine.Mobile.Views.Customer
 
             listView.ItemsSource = new List<MerchantModel>
             {
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
-                new MerchantModel { DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                 new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
+                new MerchantModel { Id=Guid.NewGuid().ToString(), DisplayName = "mono"},
             };
         }
 
@@ -69,8 +59,19 @@ namespace DendrobiiWine.Mobile.Views.Customer
             await Navigation.PushModalAsync(new NavigationPage(new CityListPage()));
         }
 
-        private async void OnItemSelected(object sender, EventArgs e)
+        private async void OnGRcodeActivated(object sender, EventArgs e)
         {
+            await Navigation.PushAsync(new GRcodePage());
+        }
+
+        private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var merchant = e.SelectedItem as MerchantModel;
+
+            var merchantDetailPage = new MerchantDetailPage();
+            merchantDetailPage.BindingContext = merchant;
+
+            await Navigation.PushAsync(merchantDetailPage);
         }
     }
 }
