@@ -1484,6 +1484,9 @@ namespace DendrobiiWine.Mobile.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.ViewStubCompat_android_id = global::DendrobiiWine.Mobile.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::Xamarin.Forms.Platform.Resource.Styleable.ViewStubCompat_android_inflatedId = global::DendrobiiWine.Mobile.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Xamarin.Forms.Platform.Resource.Styleable.ViewStubCompat_android_layout = global::DendrobiiWine.Mobile.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::ZXing.Mobile.Resource.Id.contentFrame = global::DendrobiiWine.Mobile.Droid.Resource.Id.contentFrame;
+			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::DendrobiiWine.Mobile.Droid.Resource.Layout.zxingscanneractivitylayout;
+			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::DendrobiiWine.Mobile.Droid.Resource.Layout.zxingscannerfragmentlayout;
 		}
 		
 		public partial class Animation
@@ -3421,6 +3424,9 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b001d
 			public const int collapseActionView = 2131427357;
 			
+			// aapt resource value: 0x7f0b0081
+			public const int contentFrame = 2131427457;
+			
 			// aapt resource value: 0x7f0b0046
 			public const int contentPanel = 2131427398;
 			
@@ -3899,6 +3905,12 @@ namespace DendrobiiWine.Mobile.Droid
 			
 			// aapt resource value: 0x7f03002f
 			public const int support_simple_spinner_dropdown_item = 2130903087;
+			
+			// aapt resource value: 0x7f030030
+			public const int zxingscanneractivitylayout = 2130903088;
+			
+			// aapt resource value: 0x7f030031
+			public const int zxingscannerfragmentlayout = 2130903089;
 			
 			static Layout()
 			{

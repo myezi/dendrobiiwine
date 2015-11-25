@@ -8,11 +8,16 @@ using Xamarin.Forms;
 
 namespace DendrobiiWine.Mobile.Views.Customer
 {
-    public partial class GRcodePage : ContentPage
+    public partial class QRCodePage : ContentPage
     {
-        public GRcodePage()
+        public QRCodePage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            DependencyService.Get<IQRCode>().Generate("Hello from Xamarin Forms");
         }
     }
 }
