@@ -59,7 +59,7 @@ namespace DendrobiiWine.Mobile.Views.Customer
             await Navigation.PushModalAsync(new NavigationPage(new CityListPage()));
         }
 
-        private async void OnGRcodeActivated(object sender, EventArgs e)
+        private async void OnBarcodeActivated(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new BarcodePage());
         }

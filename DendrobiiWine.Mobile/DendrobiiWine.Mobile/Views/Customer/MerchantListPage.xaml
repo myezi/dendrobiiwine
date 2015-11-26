@@ -5,7 +5,7 @@
              Title="商户列表">
   <ContentPage.ToolbarItems>
     <ToolbarItem Name="无锡" Activated="OnCityActivated"/>
-    <ToolbarItem Name="二维码" Activated="OnGRcodeActivated" />
+    <ToolbarItem Name="二维码" Activated="OnBarcodeActivated" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <ListView x:Name="listView" ItemSelected="OnItemSelected" IsPullToRefreshEnabled="true">

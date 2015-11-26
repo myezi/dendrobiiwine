@@ -11,6 +11,6 @@ namespace DendrobiiWine.Mobile.Services
     {
         Stream Generate(string contents, int width, int height);
 
-        string Scan();
+         Task<string> Scan();
     }
 }

@@ -6,8 +6,10 @@ using Android.Graphics;
 using System.IO;
 using DendrobiiWine.Mobile.Services;
 using DendrobiiWine.Mobile.Droid;
+using System.Threading.Tasks;
+using Android.App;
 
-[assembly: Xamarin.Forms.Dependency(typeof(BarcodeService))]
+[assembly: Dependency(typeof(BarcodeService))]
 namespace DendrobiiWine.Mobile.Droid
 {
     public class BarcodeService : IBarCodeService
@@ -33,9 +35,19 @@ namespace DendrobiiWine.Mobile.Droid
             return stream;
         }
 
-        public string Scan()
+        public async Task<string> Scan()
         {
-            return string.Empty;
+            var activity = Forms.Context as Activity;
+
+            MobileBarcodeScanner.Initialize(activity.Application);
+
+            var scanner = new MobileBarcodeScanner();
+            scanner.TopText = "Hold the camera up to the barcode\nAbout 6 inches away";
+            scanner.BottomText = "Wait for the barcode to automatically scan!";
+
+            var result = await scanner.Scan();
+
+            return result.Text;
         }
     }
 }

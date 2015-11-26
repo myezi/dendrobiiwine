@@ -6,6 +6,7 @@ using System.IO;
 using System.Text;
 using ZXing.Common;
 using ZXing.Mobile;
+using System.Threading.Tasks;
 
 [assembly: Xamarin.Forms.Dependency(typeof(BarcodeService))]
 namespace DendrobiiWine.Mobile.iOS
@@ -32,9 +33,9 @@ namespace DendrobiiWine.Mobile.iOS
             return stream;
         }
 
-        public string Scan()
+        public Task<string> Scan()
         {
-            return string.Empty;
+            throw new NotImplementedException();
         }
     }
 }
