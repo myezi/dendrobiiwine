@@ -32,5 +32,10 @@ namespace DendrobiiWine.Mobile.Droid
 
             return stream;
         }
+
+        public string Scan()
+        {
+            return string.Empty;
+        }
     }
 }

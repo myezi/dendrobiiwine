@@ -6,7 +6,8 @@
   
   <ContentPage.Content>
     <StackLayout>
-      <Button x:Name="loginButton" Text="登录" Clicked="OnLogin"></Button>
+      <Button x:Name="loginButton" Text="Customer Login" Clicked="OnLogin"></Button>
+      <Button x:Name="loginButton1" Text="Merchant Login" Clicked="OnLogin1"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

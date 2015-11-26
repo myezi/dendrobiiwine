@@ -1,4 +1,5 @@
 ﻿using DendrobiiWine.Mobile.Views.Customer;
+using DendrobiiWine.Mobile.Views.Merchant;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,11 @@ namespace DendrobiiWine.Mobile.Views
         private async void OnLogin(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new ThemedNavigationPage(new MerchantListPage()));
+        }
+
+        private async void OnLogin1(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new ThemedNavigationPage(new ScannerPage()));
         }
     }
 }

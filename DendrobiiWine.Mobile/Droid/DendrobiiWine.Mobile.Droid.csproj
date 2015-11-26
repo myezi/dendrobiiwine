@@ -102,6 +102,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ScannerPageRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="BarcodeService.cs" />
     <Compile Include="Resources\Resource.designer.cs" />

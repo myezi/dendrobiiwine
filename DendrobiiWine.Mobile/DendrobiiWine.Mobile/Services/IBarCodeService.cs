@@ -10,5 +10,7 @@ namespace DendrobiiWine.Mobile.Services
     public interface IBarCodeService
     {
         Stream Generate(string contents, int width, int height);
+
+        string Scan();
     }
 }

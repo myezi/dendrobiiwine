@@ -31,5 +31,10 @@ namespace DendrobiiWine.Mobile.iOS
 
             return stream;
         }
+
+        public string Scan()
+        {
+            return string.Empty;
+        }
     }
 }
