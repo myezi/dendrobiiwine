@@ -3334,8 +3334,8 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b0055
 			public const int action_bar = 2131427413;
 			
-			// aapt resource value: 0x7f0b0018
-			public const int action_bar_activity_content = 2131427352;
+			// aapt resource value: 0x7f0b0000
+			public const int action_bar_activity_content = 2131427328;
 			
 			// aapt resource value: 0x7f0b0054
 			public const int action_bar_container = 2131427412;
@@ -3343,8 +3343,8 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b0050
 			public const int action_bar_root = 2131427408;
 			
-			// aapt resource value: 0x7f0b0019
-			public const int action_bar_spinner = 2131427353;
+			// aapt resource value: 0x7f0b0001
+			public const int action_bar_spinner = 2131427329;
 			
 			// aapt resource value: 0x7f0b0039
 			public const int action_bar_subtitle = 2131427385;
@@ -3358,11 +3358,11 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b0078
 			public const int action_divider = 2131427448;
 			
-			// aapt resource value: 0x7f0b001a
-			public const int action_menu_divider = 2131427354;
+			// aapt resource value: 0x7f0b0002
+			public const int action_menu_divider = 2131427330;
 			
-			// aapt resource value: 0x7f0b001b
-			public const int action_menu_presenter = 2131427355;
+			// aapt resource value: 0x7f0b0003
+			public const int action_menu_presenter = 2131427331;
 			
 			// aapt resource value: 0x7f0b0052
 			public const int action_mode_bar = 2131427410;
@@ -3379,14 +3379,14 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b0045
 			public const int alertTitle = 2131427397;
 			
-			// aapt resource value: 0x7f0b0014
-			public const int always = 2131427348;
+			// aapt resource value: 0x7f0b001c
+			public const int always = 2131427356;
 			
 			// aapt resource value: 0x7f0b006c
 			public const int art = 2131427436;
 			
-			// aapt resource value: 0x7f0b000f
-			public const int beginning = 2131427343;
+			// aapt resource value: 0x7f0b0019
+			public const int beginning = 2131427353;
 			
 			// aapt resource value: 0x7f0b0028
 			public const int bottom = 2131427368;
@@ -3400,11 +3400,11 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b0075
 			public const int cancel_action = 2131427445;
 			
-			// aapt resource value: 0x7f0b002e
-			public const int center = 2131427374;
+			// aapt resource value: 0x7f0b0029
+			public const int center = 2131427369;
 			
-			// aapt resource value: 0x7f0b002d
-			public const int center_horizontal = 2131427373;
+			// aapt resource value: 0x7f0b002a
+			public const int center_horizontal = 2131427370;
 			
 			// aapt resource value: 0x7f0b002b
 			public const int center_vertical = 2131427371;
@@ -3415,14 +3415,14 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b007b
 			public const int chronometer = 2131427451;
 			
-			// aapt resource value: 0x7f0b0033
-			public const int clip_horizontal = 2131427379;
+			// aapt resource value: 0x7f0b0031
+			public const int clip_horizontal = 2131427377;
 			
 			// aapt resource value: 0x7f0b0032
 			public const int clip_vertical = 2131427378;
 			
-			// aapt resource value: 0x7f0b0016
-			public const int collapseActionView = 2131427350;
+			// aapt resource value: 0x7f0b001d
+			public const int collapseActionView = 2131427357;
 			
 			// aapt resource value: 0x7f0b0081
 			public const int contentFrame = 2131427457;
@@ -3445,8 +3445,8 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b006b
 			public const int default_control_frame = 2131427435;
 			
-			// aapt resource value: 0x7f0b0009
-			public const int disableHome = 2131427337;
+			// aapt resource value: 0x7f0b000d
+			public const int disableHome = 2131427341;
 			
 			// aapt resource value: 0x7f0b0072
 			public const int disconnect = 2131427442;
@@ -3454,20 +3454,20 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b0057
 			public const int edit_query = 2131427415;
 			
-			// aapt resource value: 0x7f0b0011
-			public const int end = 2131427345;
+			// aapt resource value: 0x7f0b001a
+			public const int end = 2131427354;
 			
 			// aapt resource value: 0x7f0b0080
 			public const int end_padder = 2131427456;
 			
+			// aapt resource value: 0x7f0b0022
+			public const int enterAlways = 2131427362;
+			
 			// aapt resource value: 0x7f0b0023
-			public const int enterAlways = 2131427363;
+			public const int enterAlwaysCollapsed = 2131427363;
 			
 			// aapt resource value: 0x7f0b0024
-			public const int enterAlwaysCollapsed = 2131427364;
-			
-			// aapt resource value: 0x7f0b0022
-			public const int exitUntilCollapsed = 2131427362;
+			public const int exitUntilCollapsed = 2131427364;
 			
 			// aapt resource value: 0x7f0b003c
 			public const int expand_activities_button = 2131427388;
@@ -3475,11 +3475,11 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b004c
 			public const int expanded_menu = 2131427404;
 			
-			// aapt resource value: 0x7f0b0031
-			public const int fill = 2131427377;
+			// aapt resource value: 0x7f0b0033
+			public const int fill = 2131427379;
 			
-			// aapt resource value: 0x7f0b0030
-			public const int fill_horizontal = 2131427376;
+			// aapt resource value: 0x7f0b0034
+			public const int fill_horizontal = 2131427380;
 			
 			// aapt resource value: 0x7f0b002c
 			public const int fill_vertical = 2131427372;
@@ -3487,17 +3487,17 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b0036
 			public const int @fixed = 2131427382;
 			
-			// aapt resource value: 0x7f0b001c
-			public const int home = 2131427356;
+			// aapt resource value: 0x7f0b0004
+			public const int home = 2131427332;
 			
-			// aapt resource value: 0x7f0b0006
-			public const int homeAsUp = 2131427334;
+			// aapt resource value: 0x7f0b000e
+			public const int homeAsUp = 2131427342;
 			
 			// aapt resource value: 0x7f0b0040
 			public const int icon = 2131427392;
 			
-			// aapt resource value: 0x7f0b0013
-			public const int ifRoom = 2131427347;
+			// aapt resource value: 0x7f0b001e
+			public const int ifRoom = 2131427358;
 			
 			// aapt resource value: 0x7f0b003d
 			public const int image = 2131427389;
@@ -3505,8 +3505,8 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b007f
 			public const int info = 2131427455;
 			
-			// aapt resource value: 0x7f0b0029
-			public const int left = 2131427369;
+			// aapt resource value: 0x7f0b002d
+			public const int left = 2131427373;
 			
 			// aapt resource value: 0x7f0b0079
 			public const int line1 = 2131427449;
@@ -3514,8 +3514,8 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b007d
 			public const int line3 = 2131427453;
 			
-			// aapt resource value: 0x7f0b0001
-			public const int listMode = 2131427329;
+			// aapt resource value: 0x7f0b000a
+			public const int listMode = 2131427338;
 			
 			// aapt resource value: 0x7f0b003f
 			public const int list_item = 2131427391;
@@ -3535,23 +3535,23 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b0070
 			public const int media_route_volume_slider = 2131427440;
 			
-			// aapt resource value: 0x7f0b0010
-			public const int middle = 2131427344;
+			// aapt resource value: 0x7f0b001b
+			public const int middle = 2131427355;
 			
-			// aapt resource value: 0x7f0b0034
-			public const int mini = 2131427380;
+			// aapt resource value: 0x7f0b0035
+			public const int mini = 2131427381;
 			
-			// aapt resource value: 0x7f0b000d
-			public const int multiply = 2131427341;
+			// aapt resource value: 0x7f0b0014
+			public const int multiply = 2131427348;
 			
-			// aapt resource value: 0x7f0b0012
-			public const int never = 2131427346;
+			// aapt resource value: 0x7f0b001f
+			public const int never = 2131427359;
 			
-			// aapt resource value: 0x7f0b0003
-			public const int none = 2131427331;
+			// aapt resource value: 0x7f0b000f
+			public const int none = 2131427343;
 			
-			// aapt resource value: 0x7f0b0000
-			public const int normal = 2131427328;
+			// aapt resource value: 0x7f0b000b
+			public const int normal = 2131427339;
 			
 			// aapt resource value: 0x7f0b0026
 			public const int parallax = 2131427366;
@@ -3559,38 +3559,38 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b0042
 			public const int parentPanel = 2131427394;
 			
-			// aapt resource value: 0x7f0b0025
-			public const int pin = 2131427365;
+			// aapt resource value: 0x7f0b0027
+			public const int pin = 2131427367;
 			
 			// aapt resource value: 0x7f0b006d
 			public const int play_pause = 2131427437;
 			
-			// aapt resource value: 0x7f0b001d
-			public const int progress_circular = 2131427357;
+			// aapt resource value: 0x7f0b0005
+			public const int progress_circular = 2131427333;
 			
-			// aapt resource value: 0x7f0b001e
-			public const int progress_horizontal = 2131427358;
+			// aapt resource value: 0x7f0b0006
+			public const int progress_horizontal = 2131427334;
 			
 			// aapt resource value: 0x7f0b004f
 			public const int radio = 2131427407;
 			
-			// aapt resource value: 0x7f0b002a
-			public const int right = 2131427370;
+			// aapt resource value: 0x7f0b002e
+			public const int right = 2131427374;
 			
 			// aapt resource value: 0x7f0b0068
 			public const int route_name = 2131427432;
 			
-			// aapt resource value: 0x7f0b000e
-			public const int screen = 2131427342;
+			// aapt resource value: 0x7f0b0015
+			public const int screen = 2131427349;
 			
-			// aapt resource value: 0x7f0b0021
-			public const int scroll = 2131427361;
+			// aapt resource value: 0x7f0b0025
+			public const int scroll = 2131427365;
 			
 			// aapt resource value: 0x7f0b0047
 			public const int scrollView = 2131427399;
 			
-			// aapt resource value: 0x7f0b0035
-			public const int scrollable = 2131427381;
+			// aapt resource value: 0x7f0b0037
+			public const int scrollable = 2131427383;
 			
 			// aapt resource value: 0x7f0b0059
 			public const int search_badge = 2131427417;
@@ -3631,14 +3631,14 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b004e
 			public const int shortcut = 2131427406;
 			
-			// aapt resource value: 0x7f0b0008
-			public const int showCustom = 2131427336;
+			// aapt resource value: 0x7f0b0010
+			public const int showCustom = 2131427344;
 			
-			// aapt resource value: 0x7f0b0005
-			public const int showHome = 2131427333;
+			// aapt resource value: 0x7f0b0011
+			public const int showHome = 2131427345;
 			
-			// aapt resource value: 0x7f0b0007
-			public const int showTitle = 2131427335;
+			// aapt resource value: 0x7f0b0012
+			public const int showTitle = 2131427346;
 			
 			// aapt resource value: 0x7f0b0065
 			public const int snackbar_action = 2131427429;
@@ -3646,17 +3646,17 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b0064
 			public const int snackbar_text = 2131427428;
 			
-			// aapt resource value: 0x7f0b001f
-			public const int split_action_bar = 2131427359;
+			// aapt resource value: 0x7f0b0007
+			public const int split_action_bar = 2131427335;
 			
-			// aapt resource value: 0x7f0b000c
-			public const int src_atop = 2131427340;
+			// aapt resource value: 0x7f0b0016
+			public const int src_atop = 2131427350;
 			
-			// aapt resource value: 0x7f0b000b
-			public const int src_in = 2131427339;
+			// aapt resource value: 0x7f0b0017
+			public const int src_in = 2131427351;
 			
-			// aapt resource value: 0x7f0b000a
-			public const int src_over = 2131427338;
+			// aapt resource value: 0x7f0b0018
+			public const int src_over = 2131427352;
 			
 			// aapt resource value: 0x7f0b002f
 			public const int start = 2131427375;
@@ -3673,8 +3673,8 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b006e
 			public const int subtitle = 2131427438;
 			
-			// aapt resource value: 0x7f0b0002
-			public const int tabMode = 2131427330;
+			// aapt resource value: 0x7f0b000c
+			public const int tabMode = 2131427340;
 			
 			// aapt resource value: 0x7f0b007e
 			public const int text = 2131427454;
@@ -3697,26 +3697,26 @@ namespace DendrobiiWine.Mobile.Droid
 			// aapt resource value: 0x7f0b0044
 			public const int title_template = 2131427396;
 			
-			// aapt resource value: 0x7f0b0027
-			public const int top = 2131427367;
+			// aapt resource value: 0x7f0b0030
+			public const int top = 2131427376;
 			
 			// aapt resource value: 0x7f0b0043
 			public const int topPanel = 2131427395;
 			
+			// aapt resource value: 0x7f0b0008
+			public const int up = 2131427336;
+			
+			// aapt resource value: 0x7f0b0013
+			public const int useLogo = 2131427347;
+			
+			// aapt resource value: 0x7f0b0009
+			public const int view_offset_helper = 2131427337;
+			
 			// aapt resource value: 0x7f0b0020
-			public const int up = 2131427360;
+			public const int withText = 2131427360;
 			
-			// aapt resource value: 0x7f0b0004
-			public const int useLogo = 2131427332;
-			
-			// aapt resource value: 0x7f0b0037
-			public const int view_offset_helper = 2131427383;
-			
-			// aapt resource value: 0x7f0b0015
-			public const int withText = 2131427349;
-			
-			// aapt resource value: 0x7f0b0017
-			public const int wrap_content = 2131427351;
+			// aapt resource value: 0x7f0b0021
+			public const int wrap_content = 2131427361;
 			
 			static Id()
 			{

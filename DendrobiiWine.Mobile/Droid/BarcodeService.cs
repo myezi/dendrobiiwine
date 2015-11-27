@@ -47,7 +47,7 @@ namespace DendrobiiWine.Mobile.Droid
 
             var result = await scanner.Scan();
 
-            return result.Text;
+            return result == null ? string.Empty : result.Text;
         }
     }
 }
