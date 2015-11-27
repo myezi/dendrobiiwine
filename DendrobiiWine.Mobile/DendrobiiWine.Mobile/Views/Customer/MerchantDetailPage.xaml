@@ -2,5 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DendrobiiWine.Mobile.Views.Customer.MerchantDetailPage">
-  <Button x:Name="loginButton" Text="Map" Clicked="OnMap"></Button>
+  <ContentPage.Content>
+    <StackLayout>
+      <Button x:Name="loginButton" Text="Map" Clicked="OnMap"></Button>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

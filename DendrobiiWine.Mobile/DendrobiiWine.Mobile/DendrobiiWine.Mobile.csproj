@@ -43,6 +43,7 @@
     <Compile Include="Views\Customer\CityListPage.xaml.cs">
       <DependentUpon>CityListPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Customer\MapPage.cs" />
     <Compile Include="Views\Customer\MerchantDetailPage.xaml.cs">
       <DependentUpon>MerchantDetailPage.xaml</DependentUpon>
     </Compile>

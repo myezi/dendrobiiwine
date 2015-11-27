@@ -20,7 +20,7 @@ namespace DendrobiiWine.Mobile.Views.Customer
 
         private async void OnMap(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new MapPage());
         }
     }
 }
