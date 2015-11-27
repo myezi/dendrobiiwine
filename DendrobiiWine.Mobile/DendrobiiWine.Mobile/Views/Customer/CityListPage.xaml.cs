@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 
 namespace DendrobiiWine.Mobile.Views.Customer
 {
@@ -13,6 +14,13 @@ namespace DendrobiiWine.Mobile.Views.Customer
         public CityListPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            var geocoder = new Geocoder();
         }
 
         private async void OnSelectCity(object sender, EventArgs e)

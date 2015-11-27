@@ -18,11 +18,9 @@ namespace DendrobiiWine.Mobile.Views.Customer
             InitializeComponent();
         }
 
-        protected override void OnAppearing()
+        private async void OnMap(object sender, EventArgs e)
         {
-            _selectedMerchant = (MerchantModel)BindingContext;
 
-            Title = _selectedMerchant.DisplayName;
         }
     }
 }
