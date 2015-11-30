@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DendrobiiWine.Mobile.Views.Customer.CityListPage" Title="当前城市">
-  <StackLayout>
-    <Button x:Name="loginButton" Text="登录" Clicked="OnSelectCity"></Button>
-  </StackLayout>
-</ContentPage>
