@@ -32,6 +32,7 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Services\IThirdPartyAppService.cs" />
     <Compile Include="Services\IBarCodeService.cs" />
     <Compile Include="Models\MerchantModel.cs" />
     <Compile Include="ThemedNavigationPage.cs" />
