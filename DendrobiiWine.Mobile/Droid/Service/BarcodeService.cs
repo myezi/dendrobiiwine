@@ -5,12 +5,12 @@ using ZXing.Common;
 using Android.Graphics;
 using System.IO;
 using DendrobiiWine.Mobile.Services;
-using DendrobiiWine.Mobile.Droid;
+using DendrobiiWine.Mobile.Droid.Service;
 using System.Threading.Tasks;
 using Android.App;
 
 [assembly: Dependency(typeof(BarcodeService))]
-namespace DendrobiiWine.Mobile.Droid
+namespace DendrobiiWine.Mobile.Droid.Service
 {
     public class BarcodeService : IBarCodeService
     {
