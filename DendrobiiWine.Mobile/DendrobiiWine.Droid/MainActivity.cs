@@ -8,23 +8,20 @@ using Android.OS;
 
 namespace DendrobiiWine.Droid
 {
-    [Activity(Label = "DendrobiiWine.Droid", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "DendrobiiWine.Droid", MainLauncher = true, Theme = "@android:style/Theme.Holo.Light.NoActionBar")]
     public class MainActivity : Activity
     {
-        int count = 1;
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
-
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            // Login Button
+            FindViewById<Button>(Resource.Id.btnLogin).Click += (sender, e) =>
+            {
+                StartActivity(new Intent(this, typeof(MerchantList)));
+            };
         }
     }
 }

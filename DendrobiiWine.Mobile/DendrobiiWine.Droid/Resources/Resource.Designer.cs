@@ -60,8 +60,20 @@ namespace DendrobiiWine.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int MyButton = 2131034112;
+			// aapt resource value: 0x7f060004
+			public const int btnLogin = 2131099652;
+			
+			// aapt resource value: 0x7f060001
+			public const int imgIcon = 2131099649;
+			
+			// aapt resource value: 0x7f060000
+			public const int title_text = 2131099648;
+			
+			// aapt resource value: 0x7f060002
+			public const int txtLoginName = 2131099650;
+			
+			// aapt resource value: 0x7f060003
+			public const int txtPassword = 2131099651;
 			
 			static Id()
 			{
@@ -77,7 +89,16 @@ namespace DendrobiiWine.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int AppActionBar = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int MerchantList = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int ProductList = 2130903043;
 			
 			static Layout()
 			{
@@ -96,7 +117,7 @@ namespace DendrobiiWine.Droid
 			public const int ApplicationName = 2130968577;
 			
 			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			public const int SignIn = 2130968576;
 			
 			static String()
 			{
@@ -104,6 +125,22 @@ namespace DendrobiiWine.Droid
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int AppTheme = 2131034112;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}
