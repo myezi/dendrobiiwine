@@ -13,13 +13,18 @@ using Android.Widget;
 namespace DendrobiiWine.Droid
 {
     [Activity(Label = "ProductList")]
-    public class ProductList : Activity
+    public class ProductList : NavigationActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.ProductList);
+        }
+
+        protected override ActionBarModel InitActionBarModel()
+        {
+            return null;
         }
     }
 }

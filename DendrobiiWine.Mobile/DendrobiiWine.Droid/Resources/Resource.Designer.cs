@@ -60,20 +60,17 @@ namespace DendrobiiWine.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060004
-			public const int btnLogin = 2131099652;
-			
-			// aapt resource value: 0x7f060001
-			public const int imgIcon = 2131099649;
+			// aapt resource value: 0x7f060003
+			public const int btnLogin = 2131099651;
 			
 			// aapt resource value: 0x7f060000
-			public const int title_text = 2131099648;
+			public const int imgIcon = 2131099648;
+			
+			// aapt resource value: 0x7f060001
+			public const int txtLoginName = 2131099649;
 			
 			// aapt resource value: 0x7f060002
-			public const int txtLoginName = 2131099650;
-			
-			// aapt resource value: 0x7f060003
-			public const int txtPassword = 2131099651;
+			public const int txtPassword = 2131099650;
 			
 			static Id()
 			{
@@ -115,6 +112,9 @@ namespace DendrobiiWine.Droid
 			
 			// aapt resource value: 0x7f040001
 			public const int ApplicationName = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int MerchantTitle = 2130968578;
 			
 			// aapt resource value: 0x7f040000
 			public const int SignIn = 2130968576;

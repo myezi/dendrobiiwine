@@ -19,5 +19,13 @@ namespace DendrobiiWine.Droid
         {
             base.OnCreate(bundle);
         }
+
+        protected override ActionBarModel InitActionBarModel()
+        {
+            return new ActionBarModel()
+            {
+                Title = "Resource.String.MerchantTitle"
+            };
+        }
     }
 }
