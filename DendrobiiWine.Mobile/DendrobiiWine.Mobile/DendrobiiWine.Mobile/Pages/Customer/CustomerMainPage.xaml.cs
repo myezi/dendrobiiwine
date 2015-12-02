@@ -9,18 +9,33 @@ using Xamarin.Forms;
 
 namespace DendrobiiWine.Mobile.Pages.Customer
 {
-    public partial class CustomerMainPage : ContentPage, INavigationBar
+    public partial class CustomerMainPage : ContentPage, INavigationBarOptions
     {
         public CustomerMainPage()
         {
             InitializeComponent();
+
+            if(Device.OS == TargetPlatform.Android)
+            {
+                NavigationPage.SetHasBackButton(this, false);
+            }
+        }
+
+        #region INavigationBarOptions
+
+        public bool BackButtonVisible
+        {
+            get
+            {
+                return true;
+            }
         }
 
         public IList<NavigationBarItem> LeftItems
         {
             get
             {
-                throw new NotImplementedException();
+                return null;
             }
         }
 
@@ -28,8 +43,10 @@ namespace DendrobiiWine.Mobile.Pages.Customer
         {
             get
             {
-                throw new NotImplementedException();
+                return null;
             }
         }
+
+        #endregion
     }
 }

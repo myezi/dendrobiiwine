@@ -42,7 +42,7 @@
     <Compile Include="Pages\Customer\CustomerMainPage.xaml.cs">
       <DependentUpon>CustomerMainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="App_Code\INavigationBar.cs" />
+    <Compile Include="App_Code\INavigationBarOptions.cs" />
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

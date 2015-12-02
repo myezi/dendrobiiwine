@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DendrobiiWine.Mobile.App_Code
 {
-    public interface INavigationBar
+    public interface INavigationBarOptions
     {
         string Title { get; set; }
 
