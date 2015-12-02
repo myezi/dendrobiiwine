@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="SignIn">登录</string>
-    <string name="ApplicationName">DendrobiiWine.Droid</string>
-  <string name="MerchantTitle">商户列表</string>
-</resources>
