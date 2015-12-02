@@ -36,9 +36,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="App_Code\NavigationBarItem.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\MerchantModel.cs" />
     <Compile Include="Pages\Customer\CustomerMainPage.xaml.cs">
       <DependentUpon>CustomerMainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\INavigationBar.cs" />
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
