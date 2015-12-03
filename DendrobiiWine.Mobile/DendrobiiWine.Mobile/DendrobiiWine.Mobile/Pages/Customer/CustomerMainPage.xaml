@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DendrobiiWine.Mobile.Pages.Customer.CustomerMainPage">
   <ContentPage.ToolbarItems>
-    <ToolbarItem Name="无锡"></ToolbarItem>
-      <ToolbarItem Icon="barcode.png"></ToolbarItem>
-    <ToolbarItem Icon="profile.png"></ToolbarItem>
+    <ToolbarItem Name="无锡" Clicked="OnCityClick"></ToolbarItem>
+    <ToolbarItem Icon="barcode.png" Clicked="OnPayClick"></ToolbarItem>
+    <ToolbarItem Icon="profile.png" Clicked="OnProfileClick"></ToolbarItem>
   </ContentPage.ToolbarItems>
 </ContentPage>

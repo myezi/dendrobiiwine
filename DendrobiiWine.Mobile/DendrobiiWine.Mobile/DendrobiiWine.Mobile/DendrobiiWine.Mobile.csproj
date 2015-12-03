@@ -39,10 +39,16 @@
     <Compile Include="App_Code\NavigationBarItem.cs" />
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\MerchantModel.cs" />
+    <Compile Include="Pages\Customer\CityListPage.xaml.cs">
+      <DependentUpon>CityListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Customer\CustomerMainPage.xaml.cs">
       <DependentUpon>CustomerMainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="App_Code\INavigationBarOptions.cs" />
+    <Compile Include="Pages\Customer\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -64,7 +70,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Customer\CityListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -79,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Merchant\MerchantMainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Customer\ProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

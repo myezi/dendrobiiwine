@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
@@ -13,8 +14,6 @@ namespace DendrobiiWine.Mobile.iOS.Renderers
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
-
-            
         }
     }
 }

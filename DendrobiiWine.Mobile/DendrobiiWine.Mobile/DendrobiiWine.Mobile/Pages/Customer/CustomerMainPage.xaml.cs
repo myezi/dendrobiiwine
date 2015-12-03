@@ -9,44 +9,20 @@ using Xamarin.Forms;
 
 namespace DendrobiiWine.Mobile.Pages.Customer
 {
-    public partial class CustomerMainPage : ContentPage, INavigationBarOptions
+    public partial class CustomerMainPage : ContentPage
     {
         public CustomerMainPage()
         {
             InitializeComponent();
-
-            if(Device.OS == TargetPlatform.Android)
-            {
-                NavigationPage.SetHasBackButton(this, false);
-            }
         }
 
-        #region INavigationBarOptions
-
-        public bool BackButtonVisible
+        private async void OnCityClick(object sender, EventArgs e)
         {
-            get
-            {
-                return true;
-            }
+            await Navigation.PushModalAsync(new CityListPage());
         }
 
-        public IList<NavigationBarItem> LeftItems
-        {
-            get
-            {
-                return null;
-            }
-        }
+        private async void OnPayClick(object sender, EventArgs e) { }
 
-        public IList<NavigationBarItem> RightItems
-        {
-            get
-            {
-                return null;
-            }
-        }
-
-        #endregion
+        private async void OnProfileClick(object sender, EventArgs e) { }
     }
 }
