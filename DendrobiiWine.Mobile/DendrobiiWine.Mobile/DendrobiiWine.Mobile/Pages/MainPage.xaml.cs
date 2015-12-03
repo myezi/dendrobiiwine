@@ -19,12 +19,21 @@ namespace DendrobiiWine.Mobile.Pages
 
         private async void OnCustomer(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CustomerMainPage());
+            App.Current.MainPage = BuildNavigationPage(new CustomerMainPage());
         }
 
         private async void OnMerchant(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MerchantMainPage());
+        }
+
+        private NavigationPage BuildNavigationPage(Page view)
+        {
+            var navigationPage = new NavigationPage(view);
+            navigationPage.BarBackgroundColor = Color.FromRgb(13, 146, 198);
+            navigationPage.BarTextColor = Color.White;
+
+            return navigationPage;
         }
     }
 }
