@@ -4,7 +4,7 @@
              x:Class="DendrobiiWine.Mobile.Pages.Customer.CustomerMainPage">
   <ContentPage.ToolbarItems>
     <ToolbarItem Name="无锡"></ToolbarItem>
-    <ToolbarItem Icon="barcode.png"></ToolbarItem>
+      <ToolbarItem Icon="barcode.png"></ToolbarItem>
     <ToolbarItem Icon="profile.png"></ToolbarItem>
   </ContentPage.ToolbarItems>
 </ContentPage>
