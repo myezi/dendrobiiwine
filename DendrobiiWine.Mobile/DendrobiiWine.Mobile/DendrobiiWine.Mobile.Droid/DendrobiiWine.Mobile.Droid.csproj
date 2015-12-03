@@ -96,6 +96,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\drawable\barcode.png" />
+    <AndroidResource Include="Resources\drawable\profile.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DendrobiiWine.Mobile\DendrobiiWine.Mobile.csproj">
