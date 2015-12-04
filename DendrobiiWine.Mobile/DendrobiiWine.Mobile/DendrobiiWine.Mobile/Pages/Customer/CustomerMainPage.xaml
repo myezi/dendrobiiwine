@@ -9,7 +9,7 @@
     <ToolbarItem Icon="user.png" Clicked="OnProfileClick"></ToolbarItem>
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <ListView  x:Name="listView" RowHeight="70">
+    <ListView  x:Name="listView" RowHeight="70" IsPullToRefreshEnabled="true" CachingStrategy="RecycleElement">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
