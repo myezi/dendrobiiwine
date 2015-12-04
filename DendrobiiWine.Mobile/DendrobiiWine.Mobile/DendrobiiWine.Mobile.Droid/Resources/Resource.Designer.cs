@@ -51,7 +51,10 @@ namespace DendrobiiWine.Mobile.Droid
 			public const int icon = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int profile = 2130837506;
+			public const int search = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int user = 2130837507;
 			
 			static Drawable()
 			{
@@ -59,6 +62,22 @@ namespace DendrobiiWine.Mobile.Droid
 			}
 			
 			private Drawable()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f030000
+			public const int AppTheme = 2130903040;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

@@ -21,7 +21,9 @@ namespace DendrobiiWine.Mobile.Pages.Customer
             await Navigation.PushModalAsync(new CityListPage());
         }
 
-        private async void OnPayClick(object sender, EventArgs e) { }
+        private async void OnBarCodeClick(object sender, EventArgs e) { }
+
+        private async void OnSearchClick(object sender, EventArgs e) { }
 
         private async void OnProfileClick(object sender, EventArgs e) { }
     }

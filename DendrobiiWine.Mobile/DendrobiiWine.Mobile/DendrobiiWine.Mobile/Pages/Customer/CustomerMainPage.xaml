@@ -4,7 +4,8 @@
              x:Class="DendrobiiWine.Mobile.Pages.Customer.CustomerMainPage">
   <ContentPage.ToolbarItems>
     <ToolbarItem Name="无锡" Clicked="OnCityClick"></ToolbarItem>
-    <ToolbarItem Icon="barcode.png" Clicked="OnPayClick"></ToolbarItem>
-    <ToolbarItem Icon="profile.png" Clicked="OnProfileClick"></ToolbarItem>
+    <ToolbarItem Icon="barcode.png" Clicked="OnBarCodeClick"></ToolbarItem>
+    <ToolbarItem Icon="search.png" Clicked="OnSearchClick"></ToolbarItem>
+    <ToolbarItem Icon="user.png" Clicked="OnProfileClick"></ToolbarItem>
   </ContentPage.ToolbarItems>
 </ContentPage>
