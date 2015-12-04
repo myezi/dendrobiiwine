@@ -16,7 +16,11 @@ namespace DendrobiiWine.Mobile.Pages.Customer
         {
             InitializeComponent();
 
-            listView.ItemsSource = new List<MerchantModel>
+            Appearing += async delegate
+            {
+                await Task.Delay(2000);
+
+                listView.ItemsSource = new List<MerchantModel>
             {
                 new MerchantModel {
                     Image = ImageSource.FromUri(new Uri("http://avatar.csdn.net/9/A/4/1_tangcheng_ok.jpg")),
@@ -92,8 +96,9 @@ namespace DendrobiiWine.Mobile.Pages.Customer
                     Description = DateTime.Now.ToString()
                 },
             };
+            };
         }
-        
+
         private async void OnCityClick(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new CityListPage());
