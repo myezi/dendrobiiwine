@@ -1,5 +1,4 @@
-﻿using DendrobiiWine.Mobile.App_Code;
-using DendrobiiWine.Mobile.Models;
+﻿using DendrobiiWine.Mobile.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +9,12 @@ using Xamarin.Forms;
 
 namespace DendrobiiWine.Mobile.Pages.Customer
 {
-    public partial class CustomerMainPage : ContentPage
+    public partial class MerchantDetailPage : ContentPage
     {
-        public CustomerMainPage()
+        public MerchantDetailPage()
         {
             InitializeComponent();
-
+            
             Appearing += async delegate
             {
                 await Task.Delay(2000);
@@ -97,27 +96,6 @@ namespace DendrobiiWine.Mobile.Pages.Customer
                 },
             };
             };
-        }
-
-        private async void OnCityClick(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new CityListPage());
-        }
-
-        private async void OnBarCodeClick(object sender, EventArgs e) { }
-
-        private async void OnSearchClick(object sender, EventArgs e) { }
-
-        private async void OnProfileClick(object sender, EventArgs e) { }
-
-        private async void OnMerchantSelection(object sender, SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem == null)
-            {
-                return;
-            }
-
-            await Navigation.PushAsync(new MerchantDetailPage());
         }
     }
 }
