@@ -7,7 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DendrobiiWine.Mobile.iOS", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DendrobiiWine.Mobile.Droid", "DendrobiiWine.Mobile.Droid\DendrobiiWine.Mobile.Droid.csproj", "{9A578E4D-E0D8-466A-974B-F3A4530D5239}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DendrobiiWine.Shared", "DendrobiiWine.Shared\DendrobiiWine.Shared.shproj", "{C76EB4F9-D91C-41A8-BABF-EFABD06EC90C}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		DendrobiiWine.Shared\DendrobiiWine.Shared.projitems*{9a578e4d-e0d8-466a-974b-f3a4530d5239}*SharedItemsImports = 4
+		DendrobiiWine.Shared\DendrobiiWine.Shared.projitems*{9a68e3d0-8ee9-4d86-bc34-9b17a7c5fcfe}*SharedItemsImports = 4
+		DendrobiiWine.Shared\DendrobiiWine.Shared.projitems*{c76eb4f9-d91c-41a8-babf-efabd06ec90c}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone

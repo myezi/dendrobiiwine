@@ -1,31 +1,17 @@
 ﻿using System;
 using CoreGraphics;
 using UIKit;
+using System.Collections.Generic;
 
 namespace DendrobiiWine.Mobile.iOS
 {
-	public partial class BaseTableViewSource<TSource> : UITableViewSource
+	public abstract class BaseTableViewSource<TSource, TViewController> : UITableViewSource
 	{
-		protected IList<> tableView;
+		protected IList<TSource> tableItems;
 
-		public BaseTableViewSource ()
+		public BaseTableViewSource(IList<TSource> items, TViewController viewController)
 		{
-			this.View.BackgroundColor = UIColor.White;
-
-			tableView = new UITableView(new CGRect(0, 20, View.Bounds.Width, View.Bounds.Height - 20));
-			tableView.AutoresizingMask = UIViewAutoresizing.All;
-		}
-
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
-			// Perform any additional setup after loading the view, typically from a nib.
-		}
-
-		public override void DidReceiveMemoryWarning ()
-		{
-			base.DidReceiveMemoryWarning ();
-			// Release any cached data, images, etc that aren't in use.
+            tableItems = items;
 		}
 	}
 }

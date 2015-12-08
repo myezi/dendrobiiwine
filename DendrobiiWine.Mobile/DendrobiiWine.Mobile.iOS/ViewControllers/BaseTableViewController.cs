@@ -4,7 +4,7 @@ using UIKit;
 
 namespace DendrobiiWine.Mobile.iOS
 {
-	public partial class BaseTableViewController : UITableViewController
+	public abstract class BaseTableViewController : UITableViewController
 	{
 		protected UITableView tableView;
 

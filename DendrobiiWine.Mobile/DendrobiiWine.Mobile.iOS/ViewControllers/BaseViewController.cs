@@ -4,7 +4,7 @@ using UIKit;
 
 namespace DendrobiiWine.Mobile.iOS
 {
-	public partial class BaseViewController : UIViewController
+	public abstract class BaseViewController : UIViewController
 	{
 		public BaseViewController ()
 		{
