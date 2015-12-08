@@ -19,7 +19,10 @@ namespace DendrobiiWine.Mobile.iOS
 			var navigationBar = this.NavigationController.NavigationBar;
 			navigationBar.BarTintColor = UIColor.FromRGB(13, 146, 198);
 			navigationBar.TintColor = UIColor.White;
+			navigationBar.SetBackgroundImage (UIImage.FromFile ("bg_blue.png"), UIBarMetrics.Default);
+			navigationBar.ShadowImage = new UIImage ();
 			navigationBar.BarStyle = UIBarStyle.BlackOpaque;
+
 
 			this.NavigationItem.LeftBarButtonItem = new UIBarButtonItem{ 
 				Title = "wuxi",
@@ -53,6 +56,8 @@ namespace DendrobiiWine.Mobile.iOS
 			//this.TableView = tableView;
 		}
 
+
+
 		public override nint NumberOfSections (UITableView tableView)
 		{
 			return 3;
@@ -69,7 +74,7 @@ namespace DendrobiiWine.Mobile.iOS
 		public override nfloat GetHeightForHeader (UITableView tableView, nint section)
 		{
 			if (section == 0) {
-				return .1f;
+				return 30f;
 			} else {
 				return 10f;
 			}
@@ -89,6 +94,16 @@ namespace DendrobiiWine.Mobile.iOS
 			return .1f;
 		}
 
+		public override UIView GetViewForHeader (UITableView tableView, nint section)
+		{
+			if (section == 0) {
+				var view = new UIView (new CGRect (0, 0, UIScreen.MainScreen.ApplicationFrame.Width, 50));
+				view.BackgroundColor = UIColor.FromRGB(13, 146, 198);
+				return view;
+			} else {
+				return base.GetViewForHeader (tableView, section);
+			}
+		}
 
 		public override nfloat GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
 		{
@@ -109,7 +124,7 @@ namespace DendrobiiWine.Mobile.iOS
 				if (cell == null) {
 					cell = new UITableViewCell (UITableViewCellStyle.Default, "CategorySection");
 
-					cell.BackgroundColor = UIColor.FromRGB (13, 146, 198);
+					//cell.BackgroundColor = UIColor.FromRGB (13, 146, 198);
 				}
 
 			} else {
