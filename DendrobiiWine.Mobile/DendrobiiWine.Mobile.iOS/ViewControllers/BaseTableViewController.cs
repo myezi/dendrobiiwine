@@ -12,8 +12,7 @@ namespace DendrobiiWine.Mobile.iOS
 		{
 			this.View.BackgroundColor = UIColor.White;
 
-			tableView = new UITableView(new CGRect(0, 20, View.Bounds.Width, View.Bounds.Height - 20));
-			tableView.AutoresizingMask = UIViewAutoresizing.All;
+
 		}
 
 		public override void ViewDidLoad ()
