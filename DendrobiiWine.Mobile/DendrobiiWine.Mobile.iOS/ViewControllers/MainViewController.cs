@@ -16,16 +16,21 @@ namespace DendrobiiWine.Mobile.iOS
 			base.ViewDidLoad ();
 
 			// Navigation bar
+			var navigationBar = this.NavigationController.NavigationBar;
+			navigationBar.BarTintColor = UIColor.FromRGB(13, 146, 198);
+			navigationBar.TintColor = UIColor.White;
+			navigationBar.BarStyle = UIBarStyle.BlackOpaque;
+
 			this.NavigationItem.LeftBarButtonItem = new UIBarButtonItem{ 
 				Title = "wuxi",
 			};
 
 			this.NavigationItem.RightBarButtonItems = new UIBarButtonItem[] {
 				new UIBarButtonItem {
-					Image = UIImage.FromFile ("user.png")	
+					Image = UIImage.FromFile ("search.png")
 				},
 				new UIBarButtonItem {
-					Image = UIImage.FromFile ("search.png")
+					Image = UIImage.FromFile ("user.png")	
 				},
 				new UIBarButtonItem {
 					Image = UIImage.FromFile ("barcode.png")
@@ -70,74 +75,50 @@ namespace DendrobiiWine.Mobile.iOS
 			}
 		}
 
+		public override bool ShouldHighlightRow (UITableView tableView, NSIndexPath rowIndexPath)
+		{
+			if (rowIndexPath.Section == 0) {
+				return false;
+			}
+
+			return true;
+		}
+
 		public override nfloat GetHeightForFooter (UITableView tableView, nint section)
 		{
 			return .1f;
 		}
 
-		public override void DidReceiveMemoryWarning ()
+
+		public override nfloat GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
 		{
-			base.DidReceiveMemoryWarning ();
-			// Release any cached data, images, etc that aren't in use.
+			if (indexPath.Section == 0 && indexPath.Row == 0) {
+				return 20f;
+			} else {
+				return base.GetHeightForRow (tableView, indexPath);
+			}
 		}
+
 
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
 		{
+			UITableViewCell cell;
 			if (indexPath.Section == 0) {
-				UITableViewCell cell = tableView.DequeueReusableCell("CategorySection");
+				cell = tableView.DequeueReusableCell ("CategorySection");
 				// if there are no cells to reuse, create a new one
 				if (cell == null) {
-					//cell = new UITableViewCell (UITableViewCellStyle., "CategorySection");
+					cell = new UITableViewCell (UITableViewCellStyle.Default, "CategorySection");
+
+					cell.BackgroundColor = UIColor.FromRGB (13, 146, 198);
 				}
 
+			} else {
+				cell = new UITableViewCell (UITableViewCellStyle.Default, "CategorySection");
 			}
-			// request a recycled cell to save memory
-			UITableViewCell cell = tableView.DequeueReusableCell("cellIdentifier");
-			// if there are no cells to reuse, create a new one
-			if (cell == null)
-				cell = new UITableViewCell(UITableViewCellStyle.Default, "cellIdentifier");
-
-			cell.TextLabel.Text = indexPath.Row.ToString();
 
 			return cell;
 		}
 	}
-
-
-
-	public class MainTableViewSource : UITableViewSource
-    {
-		protected string[] tableItems;
-		public MainTableViewSource(string[] items)
-        {
-			tableItems = items;
-        }
-
-		public override nint NumberOfSections (UITableView tableView)
-		{
-			return 3;
-		}
-
-
-
-        public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
-        {
-            // request a recycled cell to save memory
-            UITableViewCell cell = tableView.DequeueReusableCell("cellIdentifier");
-            // if there are no cells to reuse, create a new one
-            if (cell == null)
-                cell = new UITableViewCell(UITableViewCellStyle.Default, "cellIdentifier");
-
-            cell.TextLabel.Text = tableItems[indexPath.Row];
-
-            return cell;
-        }
-
-        public override nint RowsInSection(UITableView tableview, nint section)
-        {
-			return tableItems.Length;
-        }
-    }
 }
 
 
