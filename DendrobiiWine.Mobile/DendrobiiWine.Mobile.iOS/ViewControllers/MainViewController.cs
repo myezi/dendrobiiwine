@@ -52,17 +52,61 @@ namespace DendrobiiWine.Mobile.iOS
 
 		public override nfloat GetHeightForHeader (UITableView tableView, nint section)
 		{
-			return 100f;
+			return 90f;
 		}
 
 		public override UIView GetViewForHeader (UITableView tableView, nint section)
 		{
 			if (section == 0) {
-				var view = new UIView (new CGRect (0, 0, UIScreen.MainScreen.ApplicationFrame.Width, 90));
+				var view = new UIView (new CGRect (0, 0, UIScreen.MainScreen.ApplicationFrame.Width, 80));
 				view.BackgroundColor = UIColor.FromRGB(13, 146, 198);
 
-				var containerView = new UIView (new CGRect (0, 0, UIScreen.MainScreen.ApplicationFrame.Width, 100));
+				var containerView = new UIView (new CGRect (0, 0, UIScreen.MainScreen.ApplicationFrame.Width, 90));
 				containerView.AddSubview (view);
+
+				var foodImageView = new UIButton (UIButtonType.Custom);
+				foodImageView.SetImage (UIImage.FromFile ("food.png"), UIControlState.Normal);
+				foodImageView.SetTitle ("Food", UIControlState.Normal);
+				foodImageView.SetTitleColor (UIColor.White, UIControlState.Normal);
+				foodImageView.SetTitleColor (UIColor.Gray, UIControlState.Highlighted);
+				foodImageView.ImageEdgeInsets = new UIEdgeInsets (-25, 5, 0, 0);
+				foodImageView.TitleEdgeInsets = new UIEdgeInsets (30, -36, 0, 0);
+				foodImageView.TitleLabel.TextAlignment = UITextAlignment.Center;
+				foodImageView.Frame = new CGRect (10, 10, 50, 60);
+				containerView.AddSubview (foodImageView);
+
+				var firmImageView = new UIButton (UIButtonType.Custom);
+				firmImageView.SetImage (UIImage.FromFile ("firm.png"), UIControlState.Normal);
+				firmImageView.SetTitle ("Firm", UIControlState.Normal);
+				firmImageView.SetTitleColor (UIColor.White, UIControlState.Normal);
+				firmImageView.SetTitleColor (UIColor.Gray, UIControlState.Highlighted);
+				firmImageView.ImageEdgeInsets = new UIEdgeInsets (-25, 5, 0, 0);
+				firmImageView.TitleEdgeInsets = new UIEdgeInsets (30, -36, 0, 0);
+				firmImageView.TitleLabel.TextAlignment = UITextAlignment.Center;
+				firmImageView.Frame = new CGRect (90, 10, 50, 60);
+				containerView.AddSubview (firmImageView);
+
+				var hotelImageView = new UIButton (UIButtonType.Custom);
+				hotelImageView.SetImage (UIImage.FromFile ("hotel.png"), UIControlState.Normal);
+				hotelImageView.SetTitle ("Hotel", UIControlState.Normal);
+				hotelImageView.SetTitleColor (UIColor.White, UIControlState.Normal);
+				hotelImageView.SetTitleColor (UIColor.Gray, UIControlState.Highlighted);
+				hotelImageView.ImageEdgeInsets = new UIEdgeInsets (-25, 5, 0, 0);
+				hotelImageView.TitleEdgeInsets = new UIEdgeInsets (30, -36, 0, 0);
+				hotelImageView.TitleLabel.TextAlignment = UITextAlignment.Center;
+				hotelImageView.Frame = new CGRect (170, 10, 50, 60);
+				containerView.AddSubview (hotelImageView);
+
+				var voiceImageView = new UIButton (UIButtonType.Custom);
+				voiceImageView.SetImage (UIImage.FromFile ("voice.png"), UIControlState.Normal);
+				voiceImageView.SetTitle ("Voice", UIControlState.Normal);
+				voiceImageView.SetTitleColor (UIColor.White, UIControlState.Normal);
+				voiceImageView.SetTitleColor (UIColor.Gray, UIControlState.Highlighted);
+				voiceImageView.ImageEdgeInsets = new UIEdgeInsets (-25, 5, 0, 0);
+				voiceImageView.TitleEdgeInsets = new UIEdgeInsets (30, -36, 0, 0);
+				voiceImageView.TitleLabel.TextAlignment = UITextAlignment.Center;
+				voiceImageView.Frame = new CGRect (250, 10, 50, 60);
+				containerView.AddSubview (voiceImageView);
 
 				return containerView;
 			}
