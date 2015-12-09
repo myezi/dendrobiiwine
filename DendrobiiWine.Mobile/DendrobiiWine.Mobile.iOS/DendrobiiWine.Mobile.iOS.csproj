@@ -116,6 +116,18 @@
     <BundleResource Include="Resources\user.png" />
     <BundleResource Include="Resources\user%402x.png" />
     <BundleResource Include="Resources\bg_blue.png" />
+    <BundleResource Include="Resources\food.png" />
+    <BundleResource Include="Resources\food%402x.png" />
+    <BundleResource Include="Resources\food%403x.png" />
+    <BundleResource Include="Resources\hotel.png" />
+    <BundleResource Include="Resources\hotel%402x.png" />
+    <BundleResource Include="Resources\hotel%403x.png" />
+    <BundleResource Include="Resources\firm.png" />
+    <BundleResource Include="Resources\firm%402x.png" />
+    <BundleResource Include="Resources\firm%403x.png" />
+    <BundleResource Include="Resources\voice.png" />
+    <BundleResource Include="Resources\voice%402x.png" />
+    <BundleResource Include="Resources\voice%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup />
