@@ -23,7 +23,6 @@ namespace DendrobiiWine.Mobile.iOS
 			navigationBar.ShadowImage = new UIImage ();
 			navigationBar.BarStyle = UIBarStyle.BlackOpaque;
 
-
 			this.NavigationItem.LeftBarButtonItem = new UIBarButtonItem{ 
 				Title = "wuxi",
 			};
@@ -33,76 +32,42 @@ namespace DendrobiiWine.Mobile.iOS
 					Image = UIImage.FromFile ("search.png")
 				},
 				new UIBarButtonItem {
-					Image = UIImage.FromFile ("user.png")	
+					Image = UIImage.FromFile ("barcode.png")
 				},
 				new UIBarButtonItem {
-					Image = UIImage.FromFile ("barcode.png")
+					Image = UIImage.FromFile ("user.png")	
 				}
 			};
-
-			// Table view
-			//string[] tableItems = new string[] {"Vegetables","Fruits","Flower Buds","Legumes","Bulbs","Tubers"};
-//			tableView.Source = new MainTableViewSource(new List<MerchantModel>{
-//				new MerchantModel{Name = "asdfasdfasdf"},
-//				new MerchantModel{Name = "asdfasdfasdf"},
-//				new MerchantModel{Name = "asdfasdfasdf"},
-//			}, this);
-			//var tableView = new UITableView(new CGRect (0, 20, View.Bounds.Width, View.Bounds.Height), UITableViewStyle.Grouped);
-			//tableView.Frame = ;
-			//tableView.Style = UITableViewStyle.Grouped;
-			//tableView.AutoresizingMask = UIViewAutoresizing.All;
-			//tableView.Source = new MainTableViewSource(tableItems);
-			//Add (tableView);
-			//this.TableView = tableView;
 		}
-
-
-
+			
 		public override nint NumberOfSections (UITableView tableView)
 		{
-			return 3;
+			return 1;
 		}
+
 		public override nint RowsInSection (UITableView tableView, nint section)
 		{
-			if (section == 0) {
-				return 1;
-			} else {
-				return 4;
-			}
+			return 4;
 		}
 
 		public override nfloat GetHeightForHeader (UITableView tableView, nint section)
 		{
-			if (section == 0) {
-				return 30f;
-			} else {
-				return 10f;
-			}
-		}
-
-		public override bool ShouldHighlightRow (UITableView tableView, NSIndexPath rowIndexPath)
-		{
-			if (rowIndexPath.Section == 0) {
-				return false;
-			}
-
-			return true;
-		}
-
-		public override nfloat GetHeightForFooter (UITableView tableView, nint section)
-		{
-			return .1f;
+			return 100f;
 		}
 
 		public override UIView GetViewForHeader (UITableView tableView, nint section)
 		{
 			if (section == 0) {
-				var view = new UIView (new CGRect (0, 0, UIScreen.MainScreen.ApplicationFrame.Width, 50));
+				var view = new UIView (new CGRect (0, 0, UIScreen.MainScreen.ApplicationFrame.Width, 90));
 				view.BackgroundColor = UIColor.FromRGB(13, 146, 198);
-				return view;
-			} else {
-				return base.GetViewForHeader (tableView, section);
+
+				var containerView = new UIView (new CGRect (0, 0, UIScreen.MainScreen.ApplicationFrame.Width, 100));
+				containerView.AddSubview (view);
+
+				return containerView;
 			}
+
+			return base.GetViewForHeader (tableView, section);
 		}
 
 		public override nfloat GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
@@ -113,8 +78,7 @@ namespace DendrobiiWine.Mobile.iOS
 				return base.GetHeightForRow (tableView, indexPath);
 			}
 		}
-
-
+			
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
 		{
 			UITableViewCell cell;
@@ -135,5 +99,3 @@ namespace DendrobiiWine.Mobile.iOS
 		}
 	}
 }
-
-
