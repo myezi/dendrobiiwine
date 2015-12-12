@@ -45,13 +45,20 @@ namespace DendrobiiWine.Mobile.iOS
                 0,
                 UIScreen.MainScreen.Bounds.Width,
                 UIScreen.MainScreen.Bounds.Height - NavigationController.NavigationBar.Frame.Height - UIApplication.SharedApplication.StatusBarFrame.Height));
-            tableView.Source = new MerchantListTableViewSource();
+            tableView.Source = new MerchantListTableViewSource(this);
             Add(tableView);
         }
     }
 
     public class MerchantListTableViewSource : UITableViewSource
     {
+        private UIViewController owner;
+
+        public MerchantListTableViewSource(UIViewController viewController)
+        {
+            owner = viewController;
+        }
+
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             var cellIdentifier = "MerchantListViewCell";
@@ -72,6 +79,11 @@ namespace DendrobiiWine.Mobile.iOS
         public override nint RowsInSection(UITableView tableview, nint section)
         {
             return 15;
+        }
+
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+        {
+            owner.NavigationController.PushViewController(new MerchantDetailViewController(), true);
         }
     }
 }

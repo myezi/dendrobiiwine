@@ -16,12 +16,12 @@ namespace DendrobiiWine.Mobile.iOS
 			base.ViewDidLoad ();
 
 			// Navigation bar
-			var navigationBar = this.NavigationController.NavigationBar;
-			navigationBar.BarTintColor = UIColor.FromRGB(13, 146, 198);
-			navigationBar.TintColor = UIColor.White;
-			navigationBar.SetBackgroundImage (UIImage.FromFile ("bg_blue.png"), UIBarMetrics.Default);
-			navigationBar.ShadowImage = new UIImage ();
-			navigationBar.BarStyle = UIBarStyle.BlackOpaque;
+			//var navigationBar = this.NavigationController.NavigationBar;
+			//navigationBar.BarTintColor = UIColor.FromRGB(13, 146, 198);
+			//navigationBar.TintColor = UIColor.White;
+			//navigationBar.SetBackgroundImage (UIImage.FromFile ("bg_blue.png"), UIBarMetrics.Default);
+			//navigationBar.ShadowImage = new UIImage ();
+			//navigationBar.BarStyle = UIBarStyle.BlackOpaque;
 
 			this.NavigationItem.LeftBarButtonItem = new UIBarButtonItem{ 
 				Title = "无锡",
