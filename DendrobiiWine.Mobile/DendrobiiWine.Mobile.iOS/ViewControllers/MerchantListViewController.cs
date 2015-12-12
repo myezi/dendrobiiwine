@@ -18,21 +18,33 @@ namespace DendrobiiWine.Mobile.iOS
         {
             base.ViewDidLoad();
 
+            // Init navigation bar
+            this.NavigationItem.Title = "商家";
+
+            var searchButton = new UIBarButtonItem
+            {
+                Image = UIImage.FromFile("search.png"),
+            };
+            searchButton.Clicked += delegate {
+                this.NavigationController.PushViewController(new MerchantListViewController(), true);
+            };
+
+            this.NavigationItem.RightBarButtonItems = new UIBarButtonItem[] 
+            {
+                searchButton
+            };
+
             // Init location view
-            locationView = new UIView(new CGRect(
-                0,
-                NavigationController.NavigationBar.Frame.Height + UIApplication.SharedApplication.StatusBarFrame.Height,
-                UIScreen.MainScreen.Bounds.Width,
-                LocationViewFrameHeight));
-            locationView.BackgroundColor = UIColor.Red;
-            Add(locationView);
+            //locationView = new UIView(new CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, LocationViewFrameHeight));
+            //locationView.BackgroundColor = UIColor.Red;
+            //Add(locationView);
 
             // Init table view
             tableView = new UITableView(new CGRect(
                 0,
-                locationView.Frame.Y + LocationViewFrameHeight,
+                0,
                 UIScreen.MainScreen.Bounds.Width,
-                UIScreen.MainScreen.Bounds.Height - LocationViewFrameHeight - NavigationController.NavigationBar.Frame.Height - UIApplication.SharedApplication.StatusBarFrame.Height));
+                UIScreen.MainScreen.Bounds.Height - NavigationController.NavigationBar.Frame.Height - UIApplication.SharedApplication.StatusBarFrame.Height));
             tableView.Source = new MerchantListTableViewSource();
             Add(tableView);
         }
@@ -42,9 +54,19 @@ namespace DendrobiiWine.Mobile.iOS
     {
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
-            var cell= new MerchantListViewCell("asdf");
-            cell.TextLabel.Text = DateTime.Now.ToString();
+            var cellIdentifier = "MerchantListViewCell";
+            var cell = tableView.DequeueReusableCell(cellIdentifier) as MerchantListViewCell;
+            if (cell == null)
+                cell = new MerchantListViewCell(cellIdentifier);
+
+            cell.UpdateCell(UIImage.FromFile("test.jpg"), "帅酷天天东北烧烤", "中式烧烤 湖滨商业街", "1000", "已兑换105");
+
             return cell;
+        }
+
+        public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+        {
+            return 76.0f;
         }
 
         public override nint RowsInSection(UITableView tableview, nint section)

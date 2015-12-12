@@ -24,18 +24,23 @@ namespace DendrobiiWine.Mobile.iOS
 			navigationBar.BarStyle = UIBarStyle.BlackOpaque;
 
 			this.NavigationItem.LeftBarButtonItem = new UIBarButtonItem{ 
-				Title = "wuxi",
+				Title = "无锡",
 			};
 
-			this.NavigationItem.RightBarButtonItems = new UIBarButtonItem[] {
-				new UIBarButtonItem {
-					Image = UIImage.FromFile ("search.png")
-				},
+            var searchButton = new UIBarButtonItem
+            {
+                Image = UIImage.FromFile("search.png"),
+            };
+            searchButton.Clicked += delegate {
+                this.NavigationController.PushViewController(new MerchantListViewController(), true);
+            };
+            this.NavigationItem.RightBarButtonItems = new UIBarButtonItem[] {
+				searchButton,
 				new UIBarButtonItem {
 					Image = UIImage.FromFile ("barcode.png")
 				},
 				new UIBarButtonItem {
-					Image = UIImage.FromFile ("user.png")	
+					Image = UIImage.FromFile ("user.png")
 				}
 			};
 		}

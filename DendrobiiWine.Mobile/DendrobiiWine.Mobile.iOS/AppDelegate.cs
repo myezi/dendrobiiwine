@@ -27,7 +27,8 @@ namespace DendrobiiWine.Mobile.iOS
         {
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-			window.RootViewController = new UINavigationController (new MerchantListViewController ());
+            var navigationController = new UINavigationController(new MainViewController());
+			window.RootViewController = navigationController;
             
             window.MakeKeyAndVisible();
 

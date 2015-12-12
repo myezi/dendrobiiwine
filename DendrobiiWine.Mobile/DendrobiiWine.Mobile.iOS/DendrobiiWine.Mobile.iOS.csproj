@@ -46,7 +46,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignKey>iPhone Developer: hhappyzxm@163.com (A989DU79UQ)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignProvision>959fe88d-0ace-4d9a-9c70-9fc298f985b9</CodesignProvision>
+    <CodesignProvision>16a3e490-3003-47e3-b650-a9ae6fde60f2</CodesignProvision>
     <CodesignResourceRules />
     <CodesignExtraArgs />
   </PropertyGroup>
@@ -132,6 +132,7 @@
     <BundleResource Include="Resources\voice.png" />
     <BundleResource Include="Resources\voice%402x.png" />
     <BundleResource Include="Resources\voice%403x.png" />
+    <BundleResource Include="Resources\test.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup />

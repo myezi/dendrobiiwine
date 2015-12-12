@@ -9,6 +9,8 @@
     <Import_RootNamespace>DendrobiiWine.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AppColor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MerchantModel.cs" />
   </ItemGroup>
 </Project>
