@@ -30,26 +30,26 @@ namespace DendrobiiWine.Mobile.iOS.Views
             // Description View
             descriptionView = new UILabel()
             {
-                TextColor = UIColor.FromRGB(178, 178, 178),
-                Font = UIFont.SystemFontOfSize(10)
+                TextColor = UIColor.FromRGB(165, 165, 165),
+                Font = UIFont.SystemFontOfSize(10),
             };
 
-            // Point View
+            // Money View
             moneyView = new UILabel()
             {
-                TextColor = UIColor.Green,
+                TextColor = UIColor.FromRGB(249, 98, 104),
                 Font = UIFont.SystemFontOfSize(10)
             };
 
-            // Converted View
+            // Sold View
             soldView = new UILabel()
             {
-                TextColor = UIColor.Gray,
-                Font = UIFont.SystemFontOfSize(12),
+                TextColor = UIColor.FromRGB(165, 165, 165),
+                Font = UIFont.SystemFontOfSize(10),
                 TextAlignment = UITextAlignment.Right
             };
 
-            ContentView.AddSubviews(new UIView[] { imageView, headerView });
+            ContentView.AddSubviews(new UIView[] { imageView, headerView, descriptionView, soldView, moneyView });
         }
 
         public void UpdateCell(UIImage img, string header, string description, string money, string sold)
@@ -67,9 +67,9 @@ namespace DendrobiiWine.Mobile.iOS.Views
 
             imageView.Frame = new CGRect(12, 12, 65, 52);
             headerView.Frame = new CGRect(87, 10, 250, 20);
-            descriptionView.Frame = new CGRect(87, 32, 250, 20);
-            moneyView.Frame = new CGRect(87, 54, 100, 20);
-            soldView.Frame = new CGRect(200, 56, 110, 20);
+            descriptionView.Frame = new CGRect(87, 32, 220, 20);
+            moneyView.Frame = new CGRect(87, 50, 110, 20);
+            soldView.Frame = new CGRect(210, 50, 100, 20);
         }
     }
 }
