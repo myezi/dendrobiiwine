@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using DendrobiiWine.Shared;
 
 namespace DendrobiiWine.Mobile.iOS
 {
@@ -28,8 +29,12 @@ namespace DendrobiiWine.Mobile.iOS
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
             var navigationController = new UINavigationController(new MainViewController());
-			window.RootViewController = navigationController;
+            navigationController.NavigationBar.TintColor = UIColor.White;
+            navigationController.NavigationBar.SetBackgroundImage(UIImage.FromFile("navbar_bg.png"), UIBarMetrics.Default);
+            navigationController.NavigationBar.ShadowImage = new UIImage();
+            navigationController.NavigationBar.BarStyle = UIBarStyle.BlackOpaque;
             
+            window.RootViewController = navigationController;
             window.MakeKeyAndVisible();
 
             return true;

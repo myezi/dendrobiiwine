@@ -4,16 +4,12 @@ using System;
 using UIKit;
 using Foundation;
 using DendrobiiWine.Mobile.iOS.Views;
+using DendrobiiWine.Shared;
 
 namespace DendrobiiWine.Mobile.iOS
 {
-    public partial class MerchantListViewController : UIViewController
+    public partial class MerchantListViewController : UITableViewController
     {
-        private UIView locationView;
-        private UITableView tableView;
-
-        private const int LocationViewFrameHeight = 20;
-
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
@@ -33,30 +29,6 @@ namespace DendrobiiWine.Mobile.iOS
             {
                 searchButton
             };
-
-            // Init location view
-            //locationView = new UIView(new CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, LocationViewFrameHeight));
-            //locationView.BackgroundColor = UIColor.Red;
-            //Add(locationView);
-
-            // Init table view
-            tableView = new UITableView(new CGRect(
-                0,
-                0,
-                UIScreen.MainScreen.Bounds.Width,
-                UIScreen.MainScreen.Bounds.Height - NavigationController.NavigationBar.Frame.Height - UIApplication.SharedApplication.StatusBarFrame.Height));
-            tableView.Source = new MerchantListTableViewSource(this);
-            Add(tableView);
-        }
-    }
-
-    public class MerchantListTableViewSource : UITableViewSource
-    {
-        private UIViewController owner;
-
-        public MerchantListTableViewSource(UIViewController viewController)
-        {
-            owner = viewController;
         }
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
@@ -66,7 +38,7 @@ namespace DendrobiiWine.Mobile.iOS
             if (cell == null)
                 cell = new MerchantListViewCell(cellIdentifier);
 
-            cell.UpdateCell(UIImage.FromFile("test.jpg"), "帅酷天天东北烧烤", "中式烧烤 湖滨商业街", "1000", "已兑换105");
+            cell.UpdateCell(UIImage.FromFile("test.jpg"), "帅酷天天东北烧烤", "中式烧烤 湖滨商业街", "￥100", "已售1045");
 
             return cell;
         }
@@ -83,7 +55,7 @@ namespace DendrobiiWine.Mobile.iOS
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            owner.NavigationController.PushViewController(new MerchantDetailViewController(), true);
+            this.NavigationController.PushViewController(new MerchantDetailViewController(), true);
         }
     }
 }

@@ -134,6 +134,7 @@
     <BundleResource Include="Resources\voice%402x.png" />
     <BundleResource Include="Resources\voice%403x.png" />
     <BundleResource Include="Resources\test.jpg" />
+    <BundleResource Include="Resources\navbar_bg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup />

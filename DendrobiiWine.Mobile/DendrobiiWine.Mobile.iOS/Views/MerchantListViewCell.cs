@@ -11,13 +11,15 @@ namespace DendrobiiWine.Mobile.iOS.Views
         private UIImageView imageView;
         private UILabel headerView;
         private UILabel descriptionView;
-        private UILabel pointView;
-        private UILabel convertedView;
+        private UILabel moneyView;
+        private UILabel soldView;
 
         public MerchantListViewCell(string reuseIdentifier) : base(UITableViewCellStyle.Default, reuseIdentifier)
         {
             // Image View
             imageView = new UIImageView();
+            imageView.Layer.CornerRadius = 2;
+            imageView.Layer.MasksToBounds = true;
 
             // Header View
             headerView = new UILabel()
@@ -28,35 +30,46 @@ namespace DendrobiiWine.Mobile.iOS.Views
             // Description View
             descriptionView = new UILabel()
             {
-                TextColor = UIColor.Gray,
-                Font = UIFont.SystemFontOfSize(12)
+                TextColor = UIColor.FromRGB(178, 178, 178),
+                Font = UIFont.SystemFontOfSize(10)
             };
 
             // Point View
-            pointView = new UILabel();
+            moneyView = new UILabel()
+            {
+                TextColor = UIColor.Green,
+                Font = UIFont.SystemFontOfSize(10)
+            };
 
             // Converted View
-            convertedView = new UILabel();
+            soldView = new UILabel()
+            {
+                TextColor = UIColor.Gray,
+                Font = UIFont.SystemFontOfSize(12),
+                TextAlignment = UITextAlignment.Right
+            };
 
-            ContentView.AddSubviews(new UIView[] {imageView, headerView, descriptionView, pointView, convertedView});
+            ContentView.AddSubviews(new UIView[] { imageView, headerView });
         }
 
-        public void UpdateCell(UIImage img, string header, string description, string point, string converted)
+        public void UpdateCell(UIImage img, string header, string description, string money, string sold)
         {
             imageView.Image = img;
             headerView.Text = header;
             descriptionView.Text = description;
-            pointView.Text = point;
-            convertedView.Text = converted;
+            moneyView.Text = money;
+            soldView.Text = sold;
         }
 
         public override void LayoutSubviews()
         {
             base.LayoutSubviews();
 
-            imageView.Frame = new CGRect(8, 8, 78, 62);
-            headerView.Frame = new CGRect(90, 8, 250, 20);
-            descriptionView.Frame = new CGRect(90, 32, 250, 20);
+            imageView.Frame = new CGRect(12, 12, 65, 52);
+            headerView.Frame = new CGRect(87, 10, 250, 20);
+            descriptionView.Frame = new CGRect(87, 32, 250, 20);
+            moneyView.Frame = new CGRect(87, 54, 100, 20);
+            soldView.Frame = new CGRect(200, 56, 110, 20);
         }
     }
 }
