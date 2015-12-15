@@ -13,8 +13,7 @@ namespace DendrobiiWine.Mobile.iOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
-            // Init navigation bar
+            
             this.NavigationItem.Title = "商家";
             this.NavigationController.NavigationBar.TopItem.Title = "";
 

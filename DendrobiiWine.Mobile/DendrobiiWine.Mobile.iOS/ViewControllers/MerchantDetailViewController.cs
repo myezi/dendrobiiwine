@@ -12,45 +12,16 @@ namespace DendrobiiWine.Mobile.iOS
     {
         public MerchantDetailViewController() : base(UITableViewStyle.Grouped)
         {
-            //foreach (var view in this.View.Subviews)
-            //{
-            //    var a = view.GetType();
-            //    if (a.Name.Equals("UINavigationBarBackground", StringComparison.OrdinalIgnoreCase))
-            //    {
-                    
-            //    }
-            //}
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
-            // Naviagtion bar
-            this.AutomaticallyAdjustsScrollViewInsets = false;
-            this.NavigationController.NavigationBar.Alpha = 0.01f;
-            // 设置为半透明
+            this.NavigationItem.Title = "详情";
+            this.NavigationController.NavigationBar.TopItem.Title = "";
         }
-
-        [CompilerGenerated]
-        [Export("scrollViewDidScroll:")]
-        public void Scrolled(UIScrollView scrollView)
-        {
-            var color = UIColor.Blue;
-            var offsetY = scrollView.ContentOffset.Y;
-            if (offsetY > 0)
-            {
-                var alpha = 1 - ((64 - offsetY) / 64);
-                this.NavigationController.NavigationBar.Alpha = alpha;
-            }
-            else
-            {
-                this.NavigationController.NavigationBar.Alpha = 0.01f;
-                this.NavigationController.NavigationItem.Title = "帅酷天天东北烧烤";
-            }
-        }
-
-
+        
         public override nint NumberOfSections(UITableView tableView)
         {
             return 2;
@@ -60,7 +31,7 @@ namespace DendrobiiWine.Mobile.iOS
         {
             if (section == 0)
             {
-                var imgView = new UIImageView(new CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, 100));
+                var imgView = new UIImageView(new CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, 120));
                 imgView.Image = UIImage.FromFile("test.jpg");
 
                 return imgView;
@@ -73,7 +44,7 @@ namespace DendrobiiWine.Mobile.iOS
         {
             if (section == 0)
             {
-                return 100.0f;
+                return 120f;
             }
             else
             {
@@ -93,6 +64,18 @@ namespace DendrobiiWine.Mobile.iOS
             }
         }
 
+        public override bool ShouldHighlightRow(UITableView tableView, NSIndexPath rowIndexPath)
+        {
+            if (rowIndexPath.Section == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             UITableViewCell cell;
@@ -107,6 +90,7 @@ namespace DendrobiiWine.Mobile.iOS
                         cell = new UITableViewCell(UITableViewCellStyle.Default, cellIdentifier);
 
                     cell.TextLabel.Text = "帅酷天天东北烧烤";
+                    cell.TextLabel.TextColor = UIColor.Gray;
                 }
                 else
                 {
